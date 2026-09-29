@@ -1,0 +1,107 @@
+﻿<Page x:Class="Практическаяработа2.Pages.Task3Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Практическаяработа2.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Task3Page">
+
+    <Grid Margin="15"
+          Background="#FFE9CACA">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="170"/>
+            <RowDefinition Height="170"/>
+            <RowDefinition Height="170"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal">
+
+            <TextBlock Text="Столбцов M:"
+                       FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       Margin="0,0,5,0"/>
+
+            <TextBox x:Name="txtM"
+                     Width="50"
+                     Height="25"
+                     Text="5"
+                     Background="#FFBAA7DF"
+                     VerticalContentAlignment="Center"/>
+
+            <TextBlock Text="Строк N:"
+                       FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       Margin="20,0,5,0"/>
+
+            <TextBox x:Name="txtN"
+                     Width="50"
+                     Height="25"
+                     Text="5"
+                     Background="#FFBAA7DF"
+                     VerticalContentAlignment="Center"/>
+
+            <Button x:Name="btnGenerate"
+                    Content="Сгенерировать"
+                    Width="120"
+                    Height="30"
+                    Margin="20,0,0,0"
+                    Click="btnGenerate_Click"
+                    Background="#FFBAA7DF"/>
+
+        </StackPanel>
+
+
+        <GroupBox Grid.Row="2"
+                  Header="Исходный массив"
+                  Margin="0,5">
+
+            <DataGrid x:Name="dgOriginal"
+                      AutoGenerateColumns="True"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      HeadersVisibility="None"/>
+
+        </GroupBox>
+
+
+        <GroupBox Grid.Row="3"
+                  Header="Сортировка по возрастанию"
+                  Margin="0,5">
+
+            <DataGrid x:Name="dgAscending"
+                      AutoGenerateColumns="True"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      HeadersVisibility="None"/>
+
+        </GroupBox>
+
+
+        <GroupBox Grid.Row="4"
+                  Header="Сортировка по убыванию"
+                  Margin="0,5">
+
+            <DataGrid x:Name="dgDescending"
+                      AutoGenerateColumns="True"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      HeadersVisibility="None"/>
+
+        </GroupBox>
+
+
+        <TextBlock x:Name="txtResult"
+                   Grid.Row="5"
+                   FontWeight="Bold"
+                   FontSize="14"
+                   VerticalAlignment="Center"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,104 @@
+﻿<Page x:Class="Практическаяработа2.Pages.Task2Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Практическаяработа2.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Task2Page">
+
+    <Grid Margin="20"
+          Background="#FFE9CACA">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock
+            TextWrapping="Wrap"
+            FontSize="14"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Grid.Row="0">
+
+        <Run Text="Задача 2. " FontWeight="Bold"/>
+        <Run Text="Дана строка-предложение на русском языке. Вывести самое длинное слово в предложении (если таких слов несколько, то вывести первое из них)."/>
+
+        </TextBlock>
+        <StackPanel
+            Grid.Row="1"
+            Orientation="Horizontal"
+            Margin="0,10,0,10">
+
+            <TextBlock
+                Text="Исходные данные:"
+                FontWeight="Bold"
+                VerticalAlignment="Center"
+                Margin="0,0,10,0"/>
+
+            <TextBox
+                x:Name="txtInput"
+                Width="500"
+                Height="35"
+                VerticalContentAlignment="Center"
+                Background="#FFBAA7DF"
+                TextWrapping="Wrap"/>
+
+        </StackPanel>
+        <StackPanel
+            Grid.Row="2"
+            Orientation="Horizontal"
+            Margin="0,0,0,10">
+
+            <TextBlock
+                Text="Выходные данные:"
+                FontWeight="Bold"
+                VerticalAlignment="Center"
+                Margin="0,0,10,0"/>
+
+            <TextBox
+                x:Name="txtResult"
+                Width="400"
+                Height="30"
+                IsReadOnly="True"
+                VerticalContentAlignment="Center"
+                Background="#FFBAA7DF"/>
+
+        </StackPanel>
+        <StackPanel
+            Grid.Row="3"
+            Orientation="Horizontal"
+            Margin="0,0,0,10">
+
+        <Button
+                x:Name="btnGenerate"
+                Content="Сгенерировать"
+                Width="120"
+                Height="30"
+                Margin="0,0,10,0"
+                Click="btnGenerate_Click"
+                Background="#FFBAA7DF"/>
+
+        <Button
+                x:Name="btnExecute"
+                Content="Выполнить"
+                Width="120"
+                Height="30"
+                Click="btnExecute_Click"
+                Background="#FFBAA7DF"/>
+
+        </StackPanel>
+        <TextBlock
+            x:Name="txtError"
+            Grid.Row="4"
+            Foreground="Red"
+            FontSize="12"
+            Margin="0,5,0,0"/>
+
+
+    </Grid>
+</Page>
